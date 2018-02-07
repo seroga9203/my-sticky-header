@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sticky Header</title>
+        
+        <style>
+            html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
+
+            header{
+                position: fixed;
+                width: 100%;
+                float: left;
+                text-align: center;
+                font-size: 72px;
+                line-height: 108px;
+                height: 120px;
+                background: #ebd8bc;
+                color: #fff;
+                font-family: 'Arial';
+                -webkit-transition: all 0.4s ease;
+                -moz-transition: all 0.4s ease;
+                transition: all 0.4s ease;
+            }
+            header.sticky{
+                font-size: 24px;
+                line-height: 48px;
+                height: 48px; 
+                background: rgb(129, 133, 104);
+                text-align: left;
+                padding-left: 20px;
+            }
+            div{
+                width: 100%;
+                float: left;
+                padding: 72px 0 0 0;
+            }
+            div img{
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 2){  
+                    $('header').addClass("sticky");
+                }
+                else{
+                    $('header').removeClass("sticky");
+                }
+            });
+        </script>
+        
+        
+    </head>
+    
+    <body>
+        <header><h1> My Sticky Header</h1></header>
+        <div><img src="http://www.cityofnafplio.com/wp-content/uploads/2015/11/Napoli-de-Romania-lev%C3%A9-par-Fran%C3%A7ois-Dubuisson-en-lan-1698_snapshot2-280x560.png" width="780" height="1500" ></div>
+    </body>
+    
+</html>
